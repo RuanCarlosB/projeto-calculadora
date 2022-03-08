@@ -5,9 +5,6 @@ function Calculator(){
     this.accumulator = ''
     this.operator = ''
     this.value = ''
-    let point1 = ''
-    let point2 = ''
-    
     
     
     this.assignNumbers = function(){//assigns the numbers entered to the 'accumulator' and to 'value'
