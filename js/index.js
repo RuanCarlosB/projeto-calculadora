@@ -74,8 +74,8 @@ function Calculator(){
     }
 
     this.resolveOperation = function(){//function that performs basic operations
-        const num1 = parseInt(this.accumulator)
-        const num2 = parseInt(this.value)
+        const num1 = parseFloat(this.accumulator)
+        const num2 = parseFloat(this.value)
         const ope = this.operator
 
         if(ope == '+'){
@@ -147,6 +147,7 @@ function Calculator(){
         const num1 = this.accumulator.toString()
         const num2 = this.value.toString()
         const ope = this.operator.toString()
+        console.log(this.accumulator)
 
 
         if(this.accumulator){
