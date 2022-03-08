@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+<h1>Calculadora</h1>
+
+<div class="calculatorArea">
+
+        <div class="options">
+            <img id="icon-time" src="/img/time-svgrepo-com.svg" alt="history">
+        </div>
+
+        <div class="historic">
+        </div>
+
+        <div class="calculator">
+            <input type="text" class="display" name="display" disabled value="0" >
+            
+            <div class="buttons">
+
+                <div class="buttons-right">
+                    <button value="c" id="delete-all" class="operation">C</button>
+                    <button value="" class="operation">+/-</button>
+                    <button value="%" class="operation">%</button>
+                    <button class="num">7</button>
+                    <button class="num">8</button>
+                    <button class="num">9</button>
+                    <button class="num">4</button>
+                    <button class="num">5</button>
+                    <button class="num">6</button>
+                    <button class="num">1</button>
+                    <button class="num">2</button>
+                    <button class="num">3</button>
+                    <button id="zero" class="num">0</button>
+                    <button id="point" value="." class="num">.</button>
+                </div>
+                
+                <div class="buttons-aside">
+                    <button class="operation" value="/">/</button>
+                    <button class="operation" value="*">*</button>
+                    <button class="operation" value="-">-</button>
+                    <button class="operation" value="+">+</button>
+                    <button id="equal" class="operation" value="=">=</button>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
