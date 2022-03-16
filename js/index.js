@@ -14,16 +14,20 @@ function Calculator(){
                     if(el.innerHTML == '.' && this.value.toString().includes('.')){
                         
                     } else{
-                    this.value = this.value + el.innerHTML
-                    this.displayData()
+                        if(this.value.length <= 7){
+                        this.value = this.value + el.innerHTML
+                        this.displayData()
+                    }
                     }
                 } else {
                     if(el.innerHTML == '.' && this.accumulator.toString().includes('.')){
                         
                     } else{
-                    this.accumulator = this.accumulator + el.innerHTML
-                    this.displayData()
-                    display.style.color = '#fff'
+                    if(this.accumulator.length <= 7){
+                        this.accumulator = this.accumulator + el.innerHTML
+                        this.displayData()
+                        display.style.color = '#fff'
+                    }
                     }
                 }
             }
@@ -147,11 +151,11 @@ function Calculator(){
         const num1 = this.accumulator.toString()
         const num2 = this.value.toString()
         const ope = this.operator.toString()
-        console.log(this.accumulator)
 
 
+        console.log(num1)
         if(this.accumulator){
-            display.setAttribute('value', num1)
+            display.setAttribute('value', num1.slice(0, 8))
         }
         if(this.operator){
             display.setAttribute('value', num1 + ope)
@@ -182,6 +186,12 @@ function Calculator(){
 
 }
 
+function ScientificCalculator(){
+    
+
+
+}
+
 function showHistoric(){
     const icon = document.querySelector('#icon-time')
     const hist = document.querySelector('.historic')
@@ -197,6 +207,8 @@ function showHistoric(){
         hist.classList.toggle('entering')
     })     
 }
+
+
 
 const calc = new Calculator()
 calc.assignNumbers()
